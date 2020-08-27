@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt_br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consulta Preços</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body onload="mostraValores()">
+    
+
+    <div class="container">
+    <div class="header clearfix">
+        <h2>Consulta Preços</h2>
+   <div class="jumbotron">
+       <form action="" id="formulario" method="POST">
+       <div class="form-group">
+           <label>Data:</label>
+           <input type="text" name="data" id="data" class="form-control" placeholder=" 00/00/0000" maxlength="10" /> 
+       </div>
+       <div class="form-group">
+        <label>Cachorro Pequeno:</label>
+        <input type="number"  min="0" max="9999" maxlength="4" name="pequeno" id="pequeno" class="form-control" required x-moz-errormessage="
+        Não esqueça de preencher este campo." > 
+    </div>
+    <div class="form-group">
+        <label>Cães Grande:</label>
+        <input type="number" min="0" max="9999" maxlength="4" name="grande" id="grande" class="form-control"  required x-moz-errormessage="
+        Não esqueça de preencher este campo."> 
+    </div>
+    <button id="button"  class="btn btn-primary" type="submit" > Calcular</button>
+    </form>
+   </div>   
+    </div>
+
+    <div class="row marketing">
+        <div class="col-lg-12">
+            <table class="table table-houver">
+                <thead>
+                    <tr>
+                        <th>Data </th>
+                        <th>Cães Peqenos </th>
+                        <th>Cães Grande </th>
+                        <th>Valor </th>
+                        <th>Melhor Opção </th>
+                    </tr>
+                </thead>
+                <tbody id="resultado"></tbody>
+            </table>
+        </div>
+    </div>
+    </div>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>
